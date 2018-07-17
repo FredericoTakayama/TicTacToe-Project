@@ -172,4 +172,12 @@ if __name__ == "__main__":
                 print('Game end: Tie!')
             else:                
                 print('Game end: Player %s wins!' % res)
-            break
+            if input('Play again? (y/n): ') == 'y':
+                # reset games
+                game_table=[0]*9
+                gretting_display()
+                print(draw_table(game_table))
+                player=0
+            else:
+                break
+
